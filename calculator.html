@@ -12,71 +12,46 @@
 
     <link rel="stylesheet" href="./calculator.css">
 
-    <script src="./calculator.js" defer></script>
-
     <title>Calculator</title>
+
+    <script src="./calculator.js" defer></script>
 
 </head>
 
 <body>
 
-    <div class="calculator">
+    <div class="container">
 
-        <div class="input" id="input"></div>
+        <div class="calculator">
 
-        <div class="button">
+            <div id="output" class="display">
 
-            <div class="operators">
-
-                <button>+</button>
-
-                <button>-</button>
-
-                <button>&times;</button>
-
-                <button>&divide;</button>
+                <div data-prev-operand class="prev-operand"></div>
+                <div data-current-operand class="current-operand"></div>
 
             </div>
+
+            <button data-all-clear class="span-one">AC</button>
+            <button data-delete>DEL</button>
+            <button division>&divide;</button>
+            <button data-number>1</button>
+            <button data-number>2</button>
+            <button data-number>3</button>
+            <button multiply>&times;</button>
+            <button data-number>4</button>
+            <button data-number>5</button>
+            <button data-number>6</button>
+            <button addition>+</button>
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button subtraction>-</button>
+            <button data-number>.</button>
+            <button data-number>0</button>
+            <button data-equals class="span-one">=</button>
 
         </div>
 
-        <div class="Lpanel">
-
-            <div class="numbers">
-
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                
-            </div>
-
-            <div class="numbers">
-
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-
-            </div>
-
-            <div class="numbers">
-
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-
-            </div>
-
-            <div class="numbers">
-
-                <button>0</button>
-                <button>.</button>
-                <button id="clear">C</button>
-
-            </div>
-
-        </div>
-
-        <button class="equal" id="result">=</>
 
     </div>
     
