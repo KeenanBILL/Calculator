@@ -20,35 +20,37 @@
 
 <body>
 
+    <h1>Calculator</h1>
+
     <div class="container">
 
         <div class="calculator">
 
             <div id="output" class="display">
 
-                <div data-prev-operand class="prev-operand"></div>
-                <div data-current-operand class="current-operand"></div>
+                <div id="previous" class="prev-operand"></div>
+                <div id="current" class="current-operand"></div>
 
             </div>
 
-            <button data-all-clear class="span-one">AC</button>
-            <button data-delete>DEL</button>
-            <button division>&divide;</button>
-            <button data-number>1</button>
-            <button data-number>2</button>
-            <button data-number>3</button>
-            <button multiply>&times;</button>
-            <button data-number>4</button>
-            <button data-number>5</button>
-            <button data-number>6</button>
-            <button addition>+</button>
-            <button data-number>7</button>
-            <button data-number>8</button>
-            <button data-number>9</button>
-            <button subtraction>-</button>
-            <button data-number>.</button>
-            <button data-number>0</button>
-            <button data-equals class="span-one">=</button>
+            <button onclick="clearSum()" class="span-one">AC</button>
+            <button onclick="removeSum('')" class="operator">DEL</button>
+            <button onclick="addToSum('/')" class="operator">&divide;</button>
+            <button onclick="addToSum('1')" class="numbers">1</button>
+            <button onclick="addToSum('2')" class="numbers">2</button>
+            <button onclick="addToSum('3')" class="numbers">3</button>
+            <button onclick="addToSum('*')" class="operator">&times;</button>
+            <button onclick="addToSum('4')" class="numbers">4</button>
+            <button onclick="addToSum('5')" class="numbers">5</button>
+            <button onclick="addToSum('6')" class="numbers">6</button>
+            <button onclick="addToSum('+')" class="operator">+</button>
+            <button onclick="addToSum('7')" class="numbers">7</button>
+            <button onclick="addToSum('8')" class="numbers">8</button>
+            <button onclick="addToSum('9')" class="numbers">9</button>
+            <button onclick="addToSum('-')" class="operator">-</button>
+            <button onclick="addToSum('.')" class="operator">.</button>
+            <button onclick="addToSum('0')" class="numbers">0</button>
+            <button onclick="evaluateSum('=')" class="span-one">=</button>
 
         </div>
 
