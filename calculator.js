@@ -1,8 +1,29 @@
 const input = document.getElementById("previous");
 const output = document.getElementById("current");
+let arr = []
 
 function addToSum(num) {
-    input.innerHTML += num;
+    switch(num) {
+        case `+`:
+        case `-`:
+        case `*`:
+        case `/`:
+            input.innerHTML += num
+            arr = []
+            break;
+        case `.`:
+            if(arr.includes(`.`)) {
+                input.innerHTML = input.innerHTML
+            } else {
+                input.innerHTML += num
+                arr.push(num)
+            }
+        break;
+        
+        default:
+            input.innerHTML += num;
+            arr.push(num)
+    }
 }
 
 function outputDisplay(num) {
@@ -20,6 +41,7 @@ function removeSum() {
     let insert = document.getElementById("previous").innerText;
     insert =  insert.slice(0, -1);
     document.getElementById("previous").innerText = insert;
+    arr.pop()
     
 }
 
